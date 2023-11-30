@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnoses</title>
+</head>
+<body>
+    <h1 style="text-align: center;margin-left: auto; margin-right: auto;">Diagnoses of <span style="color: #0094bd;">{{patient.name}}</span></h1>
+    {{#each diagnoses}}
+    <div class="diagnosis-item">
+        <br>
+        <div class="diagnosis-text" style="padding-bottom: 10px; border: none;border-bottom: 1px solid #0094bd;width: fit-content;">{{ this }}</div>
+    </div>
+    {{/each}}
+    <button onclick="goBack()" style="border: none;font-weight: bold;color: white;background-color: #0094bd;padding: 10px 20px;border-radius: 15px;cursor: pointer;margin-top: 2px;margin-top:10px">Go Back</button>
+    <script >
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

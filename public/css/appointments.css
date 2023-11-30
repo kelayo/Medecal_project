@@ -1,0 +1,202 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #10253f ;
+    --main-color-alt: #527c88;
+    --main-color-alt2:#d7baad;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+    --back-ground: #0094bd;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100%;
+}
+
+.container  .info-P {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    background-color: white;
+    width: 18%;
+    padding: 0px;
+    position: relative;
+    z-index: 100;
+
+}
+
+.container  .info-P::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.199);
+    z-index: -1;
+}
+
+.container  .info-P .box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    padding-left: 8px;
+}
+.container  .info-P .box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: center;
+
+}
+.container  .info-P .box ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    position: relative;
+
+}
+.container  .info-P .box ul li {
+    font-size: 15px;
+    color: var(--main-color-alt);
+}
+
+.container  .info-P .box ul li a {
+    color: var(--main-color-alt);
+    transition: var(--main-transition);
+}
+
+.container  .info-P .box ul li:hover a {
+    color: black;
+    transform: scale(4px);
+
+}
+
+.container  .info-P .box ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(47, 133, 155, 0.815);
+}
+
+.set-appointment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    background-image: url("appointment.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 100;
+    gap: 10px;
+}
+.set-appointment::before { 
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.562);
+    z-index: -1;
+}
+.set-appointment .select {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100%-18%);
+}
+
+#allButton {
+    border: none;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(147, 243, 214);;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-left: 30px;
+}
+#timeSlot {
+    -webkit-appearance: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #ddd;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10 #ddd;
+    padding: 5px 100px;
+}
+.set-appointment .select label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+
+}

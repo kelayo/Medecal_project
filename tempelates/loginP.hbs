@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login Patient</title>
+</head>
+<body>
+
+    <h1>Login Patient</h1>
+
+    <form action="/loginP" method="post" >
+        {{!-- <div class="name">
+            <input placeholder="Name" name="name" type="text">
+        </div> --}}
+        <div class="idCard">
+            <input placeholder="ID Card" name="idCard" type="text" required minlength="7" maxlength="7">
+        </div>
+        <div class="password">
+            <input placeholder="Password" name="password" type="password" required minlength="7" maxlength="7">
+        </div>
+        </div>
+        <input class="sub log" type="submit">
+        <div class="another">
+            <h3>Dont have a account ?</h3>
+            <a href="/signupP">Create a new account</a>
+        </div>
+    </form>
+
+
+    
+</body>
+</html>

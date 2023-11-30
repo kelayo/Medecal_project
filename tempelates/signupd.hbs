@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>Sign up Doctror</title>
+</head>
+<body>
+    
+    <h1>Sign Up Doctor</h1>
+    {{#if errorMessage}}
+    <div class="alert alert-danger" style="color: white;">{{errorMessage}}</div>
+    {{/if}}
+    <form action="/signupd" method="post">
+        <div class="name">
+            <input placeholder="Name" name="name" type="text" required>
+        </div>
+        <div class="idCard">
+            <input placeholder="ID Card" name="idCard" type="text" required>
+        </div>
+        <div class="password">
+            <input placeholder="Password" name="password" type="password" required>  
+        </div>
+
+    <!-- Specialty Section (Radio Buttons) -->
+        <div class="specialty">
+            <label>Select your specialty:</label><br>
+            <input type="radio" id="specialty1" name="specialty" value="Cardiologist" required>
+            <label for="specialty1">Cardiologist</label><br>
+            <input type="radio" id="specialty2" name="specialty" value="Dermatologist" required>
+            <label for="specialty2">Dermatologist</label><br>
+            <input type="radio" id="specialty3" name="specialty" value="Pediatrician" required>
+            <label for="specialty3">Pediatrician</label><br>
+            <input type="radio" id="specialty4" name="specialty" value="Orthopedic Surgeon" required >
+            <label for="specialty4">Orthopedic Surgeon</label><br>
+            <!-- Add more doctor specialties as needed -->
+        </div>
+
+        <input class="sub log" type="submit">
+    </form>
+
+    <a href="/">Go back to the login page</a>
+
+
+</body>
+</html>

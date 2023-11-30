@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signup.css">
+    <title>Sign up Patient</title>
+</head>
+<body>
+    
+    <h1>Sign Up Patient</h1>
+
+    <form action="/signupP" method="post">
+    <div class="idCard">
+        <input placeholder="ID Card" name="idCard" type="text" minlength="7" maxlength="7" required>
+    </div>
+    <div class="name">
+        <input placeholder="Name" name="name" type="text" required>
+    </div>
+    <div class="password">
+        <input placeholder="Password" name="password" type="password" minlength="7" maxlength="7" required>
+    </div>
+    <div class="age">
+        <input placeholder="Age" name="age" type="number" required>
+    </div>
+    <div class="idDoc">
+        <input placeholder="Doctor id" name="idDoc" type="text" minlength="7" maxlength="7">
+    </div>
+    <div class="gender">
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="gender" value="Other" required>
+    </div>
+    <input class="sub log" type="submit">
+</form>
+
+
+    <a href="/">Go back to login page</a>
+
+</body>
+</html>

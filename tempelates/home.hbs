@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/dash.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info-d">
+            <div class="box info">
+                <img src="css/avatar1.jpg" alt="">
+                <ul>
+                    <li>Welcome : {{ naming }}</li>
+                    <li>Id card : {{ idcard }}</li>
+                    <li>Speciality: {{speciality}}</li>
+                    <li id="numpatient">Number of Patients:{{length}}</li>
+                </ul>
+            </div>
+            <div class="box options">
+                <ul>
+                    <li><a href="/today-appointments/{{idcard}}">Today Appointments</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="patient-all">
+            <div>
+                <input type="text" id="searchIdCard" placeholder="Enter ID Card">
+                <button onclick="searchPatient()" id="allButton">Search</button>
+            </div>
+            <div data-patient-id="" id="patientInfo">
+                {{#each appear}}
+                <div data-patient-id="{{ _id }}">
+                    IdCard: {{ idCard }}<br><br>
+                    Name: {{ name }}<br><br>
+                    Age: {{ age }}<br><br>
+                    Gender: {{ gender }}<br>
+                    <button onclick="deletePatient('{{ _id }}')" id="allButton">Delete</button> 
+                    <button onclick="addDiagnosis('{{ _id }}')" id="allButton">Add Diagnosis</button>
+                    <button onclick="showDiagnosis('{{ _id }}')" id="allButton">Show Diagnosis</button>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <script src="css/home.js"></script>
+</body>
+</html>

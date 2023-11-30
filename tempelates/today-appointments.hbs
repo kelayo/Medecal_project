@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Today's Appointments</title>
+    <link rel="stylesheet" href="/css/today-appointments.css">
+</head>
+<body>
+    <h1 style="color: white;">Hello Dr.<span style="color:rgb(253, 131, 131);">{{doctor.name}} </span>Your Today's Appointments</h1>
+    <form method="post" action="/delete-appointments">
+    <input type="hidden" name="doctorIdCard" value="{{doctor.idCard}}">
+        <ul>
+            {{#each formattedAppointments}}
+                <li>
+                    <input type="checkbox" name="selectedAppointments" value="{{appointmentid}}">
+                    <span style="color:rgb(253, 131, 131);"><strong style="color:rgb(255, 255, 255);">Date and Time:</strong> <strong>{{formatDate appointmentDate}}</strong></span>
+                    <span style="color:rgb(253, 131, 131);"><strong style="color: rgb(255, 255, 255);;">Patient Name:</strong> <strong>{{patientName}}</strong></span>
+                </li>
+            {{/each}}
+        </ul>
+        <button  type="submit" style="border: none;font-weight: bold;color: white;background-color:rgb(253, 131, 131) ;padding: 10px 20px;border-radius: 15px;cursor: pointer;margin-top: 2px;margin-top:10px" id="deleteAppointments">Delete Selected Appointments</button>
+        <a href="javascript:history.back()" style="border: none;font-weight: bold;color: white;background-color: rgb(253, 131, 131);padding: 10px 20px;border-radius: 15px;cursor: pointer;margin-top: 2px;margin-top:10px">go Back</a>
+    </form>
+</body>
+</html>
+

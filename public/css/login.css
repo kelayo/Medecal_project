@@ -1,0 +1,139 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  :root {
+    --main-color: #10253f ;
+    --main-color-alt: #527c88;
+    --main-color-alt2:#d7baad;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+    --back-ground: #0094bd;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Cairo", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+    .log {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: var(--main-color-alt);
+    border: 1px solid var(--main-color-alt);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  } 
+
+
+  .log:hover {
+    background-color: transparent;
+    border: 1px solid var(--main-color-alt);
+
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+    flex-wrap: wrap;
+    background-image: url("doctor-sign.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    position: relative;
+  }
+  h1 {
+    color: white;
+  }
+
+  body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.788);
+    z-index: -1;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .name input,.password input,.idCard input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--main-color-alt);
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+  }
+
+  .name input::placeholder,.password input::placeholder ,.idCard input::placeholder{
+    color: white;
+  }
+  .another  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .another a {
+    color: var(--main-color-alt);
+    font-weight: bold;
+
+  }
